@@ -1,18 +1,14 @@
 #!/usr/bin/expect
 
 spawn yo hubot
+expect "(Y/n)"
+send "n\r"
 expect ":"
-sleep 1
 send "\r"
-sleep 1
 expect "(hubot)"
-sleep 1
 send "\r"
-sleep 1
 expect "(A simple helpful robot for your Company)"
-sleep 1
 send "\r"
-sleep 1
 expect "(campfire)"
 send "hipchat\r"
 expect eof
