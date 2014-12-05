@@ -6,6 +6,7 @@ RUN   ln -s /usr/bin/nodejs /usr/bin/node
 
 RUN   npm install yo generator-hubot coffee-script -g
 ADD   install_hubot /usr/local/bin/install_hubot
+RUN   chmod +x /usr/local/bin/install_hubot
 RUN   /usr/local/bin/install_hubot
 RUN   chmod 755 bin/hubot
 
