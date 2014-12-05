@@ -8,6 +8,7 @@ RUN npm install -g yo generator-hubot coffee-script
 ADD install_hubot /usr/local/bin/install_hubot
 RUN chmod +x /usr/local/bin/install_hubot
 RUN /usr/local/bin/install_hubot
+RUN npm install .
 RUN npm install hubot-hipchat
 RUN chmod 755 bin/hubot
 
