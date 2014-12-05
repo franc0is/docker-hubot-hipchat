@@ -19,6 +19,6 @@ send "\r"
 sleep 1
 expect "(campfire)"
 sleep 1
-send "hipchat\r"
+send "\r"
 expect eof
 
