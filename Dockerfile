@@ -1,12 +1,12 @@
 FROM  ubuntu:14.04
 
 RUN   apt-get update
-RUN   apt-get -y install wget git redis-server nodejs npm
+RUN   apt-get -y install expect redis-server nodejs npm
 RUN   ln -s /usr/bin/nodejs /usr/bin/node
 
-RUN   npm install coffee-script hubot -g
-RUN   hubot --create .
-RUN   npm install --save hubot-hipchat
+RUN   npm install yo generator-hubot coffee-script -g
+ADD   install_hubot /usr/local/bin/install_hubot
+RUN   /usr/local/bin/install_hubot
 RUN   chmod 755 bin/hubot
 
 RUN   apt-get -y install supervisor
